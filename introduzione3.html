@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduzione JavaScript 3</title>
+</head>
+<body>
+    <button onclick="colore()">Cambia colore sfondo</button>
+    
+    <script>
+        function colore() {
+            var colori = ["#ffff","#00FF00", "#0000FF", "#FF0000"];
+            var casuale = colori[Math.floor(Math.random() * colori.length)];
+            document.body.style.backgroundColor = casuale;
+        }
+    </script>
+</body>
+</html>

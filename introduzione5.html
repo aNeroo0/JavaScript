@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduzione JavaScript 5</title>
+</head>
+<body>
+    <button onclick="cambia()">Cambia Immagine!</button>
+    <img id="img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzu4v0FVyI2XwEVMFGlMjANkrhL0y2TuOGxnimGEgREaWch7e93pYKkIZ2Xq5FhHkWfGw&usqp=CAU" alt="immagine 1">
+
+    <script>
+        function cambia() {
+            var img = document.getElementById("img");
+            console.log(img.src)
+            if (img.src.includes("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzu4v0FVyI2XwEVMFGlMjANkrhL0y2TuOGxnimGEgREaWch7e93pYKkIZ2Xq5FhHkWfGw&usqp=CAU")) {
+                img.src = "https://www.artemedialab.it/wp-content/uploads/2019/04/immagini-sfondo-1.jpg"
+            } else {
+                img.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzu4v0FVyI2XwEVMFGlMjANkrhL0y2TuOGxnimGEgREaWch7e93pYKkIZ2Xq5FhHkWfGw&usqp=CAU"
+            }
+        }
+    </script>
+</body> 
+</html>

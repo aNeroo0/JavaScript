@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduzione JavaScript 7</title>
+</head>
+<body>
+    <h1>Numeri da 1 a 10</h1>
+    <ul id="lista"></ul>
+
+    <script>
+        var list = document.getElementById("lista");
+        
+        for (var i=0; i<=10; i++) {
+            var item = document.createElement("li");
+            item.textContent = "Numero: " + i;
+            list.appendChild(item);
+        }
+    </script>
+</body>
+</html>

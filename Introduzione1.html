@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduzione JavaScript 1</title>
+</head>
+<body>
+    <style>
+        .clas1{
+            color:red;
+            font-weight: bold;
+        }
+    </style>
+
+    <h1 id="titolo">Ciao, Mondo!</h1>
+    <button onclick="cambiaTesto()">Cambia!</button>
+
+    <script>
+        function cambiaTesto() {
+            var tit = document.getElementById("titolo");
+            tit.textContent = "Testo Cambiato!";
+            tit.classList.add("clas1");
+        }
+    </script>
+</body>
+</html>

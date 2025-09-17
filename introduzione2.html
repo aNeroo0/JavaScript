@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduzione JavaScript 2</title>
+</head>
+<body>
+    <style>
+        .c1 {
+            display: none;
+        }
+    </style>
+
+    <p id="messaggio">Questo messaggio può esserenascosto!</p>
+    <button onclick="visibilita()">Mostra/Nascondi</button>
+    
+    <script>
+        function visibilita() {
+            var mes = document.getElementById("messaggio");
+            mes.classList.toggle("c1")
+        }
+    </script>
+</body>
+</html>
