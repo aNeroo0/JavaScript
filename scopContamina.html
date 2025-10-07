@@ -9,17 +9,19 @@
    <script>
 
     let messaggio = "globale";
-    function mostraMessaggio(messaggio) {
+    function mostraMessaggio() {
         let messaggio = "locale";
         console.log("Messaggio dentro: "+messaggio);
     }
     mostraMessaggio();
     console.log("Messaggio fuori: "+messaggio);
 
-    /* (function() {
+    (function() {
         var segreto = '12345';
-        console.log(segreto);
-    }) (); */
+        console.log("Segreto dentro: "+segreto);
+    }) ();
+
+    console.log("Segreto fuori: "+segreto);
 
    </script> 
 </body>
