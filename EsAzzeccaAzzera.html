@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio : Azzecca e azzera</title>
+</head>
+<body>
+    <script>
+        // array di 50 elementi con numeri casuali tra 1 e 50
+        var array = [];
+        for (var i = 0; i < 50; i++) {
+            array[i] = Math.floor(Math.random() * 50) + 1;
+        }
+        console.log(array);
+
+        // Continua a chiedere un numero finché tutti gli elementi sono 0
+        var controllo = true;
+        while (controllo == true) {
+            var num = parseInt(prompt("Inserisci un numero intero:"));
+            for (var i = 0; i < array.length; i++) {
+                if (array[i] % num == 0 && array[i] != 0) {
+                    array[i] = 0;
+                }
+            }
+            for (var i = 0; i < array.length; i++) {
+                if (array[i] != 0) {
+                    console.log(array);
+                    controllo = true;
+                    break;
+                } else {
+                    controllo = false;
+                }
+            }
+        }   
+        console.log("Hai azzerato tutto l'array!");
+    </script>
+</body>
+</html>
