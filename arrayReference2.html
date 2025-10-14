@@ -9,13 +9,10 @@
     <script>
         // Leggi in input 7 valori e memorizzali nell'array incassi1
         var incassi1 = [];
-        incassi1[0] = 100;
-        incassi1[1] = 200;
-        incassi1[2] = 150;
-        incassi1[3] = 175;
-        incassi1[4] = 225;
-        incassi1[5] = 300;
-        incassi1[6] = 275;
+        for (var i = 0; i < 7; i++) {
+            var valore = parseInt(prompt("Inserisci l'incasso del giorno " + (i+1)));
+            incassi1[i] = valore;
+        }
         console.log("incassi settimana 1:", incassi1);
 
         // copia del primo array e riduci del 10% il primo e l'ultimo giorno della seconda settimana
