@@ -43,22 +43,6 @@
                 { nome: "Sara", mediaPrimo: 7, votiSecondo: [8, 7, 9] },
             ];
 
-            const n = parseInt(prompt("Quanti studenti vuoi inserire?"));
-
-            for (let i = 0; i < n; i++) {
-                const nome = prompt(`Inserisci il nome dello studente ${i + 1}:`);
-                const mediaPrimo = parseFloat(prompt(`Inserisci la media del primo quadrimestre per ${nome}:`));
-                const numVotiSecondo = parseInt(prompt(`Quanti voti ha nel secondo quadrimestre ${nome}?`));
-                const votiSecondo = [];
-
-                for (let j = 0; j < numVotiSecondo; j++) {
-                    const voto = parseFloat(prompt(`Inserisci il voto ${j + 1} per ${nome}:`));
-                    votiSecondo.push(voto);
-                }
-
-                studenti.push({ nome, mediaPrimo, votiSecondo });
-            }
-
             let contA = 0; // media 2° insufficiente
             let contB = 0; // insufficiente e inferiore
             let contC = 0; // sufficiente ma inferiore
@@ -89,6 +73,7 @@
     </script>
 </body>
 </html>
+
 
 
 
