@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flusso Cassa Mensile</title>
+</head>
+<body>
+    <script>
+        function gestisciFlussi() {
+            let valoreCassa = parseFloat(prompt("Inserisci il valore iniziale del flusso di cassa:"));
+            const numFlussi = parseInt(prompt("Quanti flussi di cassa vuoi inserire?"));
+
+            for (let i=0; i<numFlussi; i++) {
+                let segno = prompt("Inserisci il segno (+ entrate, - uscite) " +(i+1)+ ":");
+                let numValori = parseInt(prompt("Quanti valori vuoi inserire?"));
+                const valori = [];
+                valori.push(segno);
+
+                for (let j=0; j<numValori; j++) {
+                    let valore = parseFloat(prompt("Inserisci il valore " +(j+1)+ ":"));
+                    valori.push(valore);
+                }
+
+                valoreCassa = calcola(valoreCassa, ...valori);
+                console.log("Valore cassa dopo il flusso " +(i+1)+ ": " +valoreCassa);
+            }
+
+        }
+
+        function calcola(valoreCassa, ...valori) {
+            let somma = 0;
+            for (let i=1; i<valori.length; i++) {
+                somma += valori[i];
+            }
+
+            if (valori[0] == "+") {
+                return valoreCassa + somma;
+            } else if (valori[0] == "-") {
+                return valoreCassa - somma;
+            } else {
+                console.log("Segno non valido usa + per entrate e - per uscite.");
+                return valoreCassa;
+            }
+        }
+        
+        gestisciFlussi()
+    </script>
+</body>
+</html>
