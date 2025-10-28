@@ -46,13 +46,13 @@
             const n = parseInt(prompt("Quanti studenti vuoi inserire?"));
 
             for (let i = 0; i < n; i++) {
-                const nome = prompt(`Inserisci il nome dello studente ${i + 1}:`);
-                const mediaPrimo = parseFloat(prompt(`Inserisci la media del primo quadrimestre per ${nome}:`));
-                const numVotiSecondo = parseInt(prompt(`Quanti voti ha nel secondo quadrimestre ${nome}?`));
+                const nome = prompt("Inserisci il nome dello studente " + (i + 1) + ":");
+                const mediaPrimo = parseFloat(prompt("Inserisci la media del primo quadrimestre per " + nome + ":"));
+                const numVotiSecondo = parseInt(prompt("Quanti voti ha nel secondo quadrimestre " + nome + "?"));
                 const votiSecondo = [];
 
                 for (let j = 0; j < numVotiSecondo; j++) {
-                    const voto = parseFloat(prompt(`Inserisci il voto ${j + 1} per ${nome}:`));
+                    const voto = parseFloat(prompt("Inserisci il voto " + (j + 1) + " per " + nome + ":"));
                     votiSecondo.push(voto);
                 }
 
@@ -89,5 +89,3 @@
     </script>
 </body>
 </html>
-
-
